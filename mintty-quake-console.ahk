@@ -127,7 +127,7 @@ Slide(Window, Dir)
 {
     global initialWidth, animationModeFade, animationModeSlide, animationStep, animationTimeout, autohide, isVisible, currentTrans, initialTrans
     WinGetPos, Xpos, Ypos, WinWidth, WinHeight, %Window%
-    
+
     WinGet, testTrans, Transparent, %Window%
     if (testTrans = "" or (animationModeFade and currentTrans = 0))
     {
@@ -141,7 +141,7 @@ Slide(Window, Dir)
     }
 
     VirtScreenPos(ScreenLeft, ScreenTop, ScreenWidth, ScreenHeight)
-    
+
     if (animationModeFade)
     {
         WinMove, %Window%,, WinLeft, ScreenTop
@@ -204,7 +204,7 @@ toggleScript(state) {
             init()
             return
         }
-        
+
         ; use mintty's transparency setting, if it's set
         WinGet, minttyTrans, Transparent, ahk_pid %hw_mintty%
         if (minttyTrans <> "")
